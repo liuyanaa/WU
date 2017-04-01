@@ -11,17 +11,30 @@ import javax.swing.JFrame;
 public class AppFrame extends JFrame {
 
 	private static final long serialVersionUID = 1L;
+	/**
+	 * 棋盘 面板
+	 */
+	private Panel panel;
 
 	/**
 	 * 构造方法
 	 */
 	public AppFrame() {
+		initUi();
+		setVisible(true);
+	}
+	/**
+	 * 初始化用户接口
+	 */
+	private void initUi() {
 		setTitle("五子棋");
-		setSize(500, 500);
+		setSize(506, 529);
 		setLocationRelativeTo(null);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setResizable(false);
-		setVisible(true);
+		
+		panel = new Panel();
+		add(panel);
 	}
 
 }
